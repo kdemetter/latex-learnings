@@ -15,4 +15,8 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: PDF
-          path: tutorial.pdf    
+          path: tutorial.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
